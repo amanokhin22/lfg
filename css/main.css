@@ -8,7 +8,7 @@ body {
   width: 100%;
   height: 100%;
   overflow-x: hidden;
-  background: #dcdcdc;
+  background: #ffffff;
   color: #000000;
   font-family: 'Lexend', sans-serif;
   overscroll-behavior: none;
@@ -26,12 +26,12 @@ body {
 
 ::-moz-selection {
   color: #121315;
-  background: #b9e9b3;
+  background: #9724eb;
 }
 
 ::selection {
-  color: #121315;
-  background: #b9e9b3;
+  color: #000000;
+  background: #9724eb;
 }
 
 html.has-scroll-smooth {
@@ -44,7 +44,7 @@ html.has-scroll-smooth {
 }
 
 .c-scrollbar_thumb {
-  background: #b9e9b3;
+  background: #000000;
   opacity: 1;
 }
 
@@ -70,7 +70,7 @@ html.has-scroll-smooth {
 }
 .heading .fill {
   opacity: 1;
-  color: #b9e9b3;
+  color: #8110f6;
   position: absolute;
   top: 0;
   left: 0;
@@ -212,7 +212,7 @@ p {
 
 a {
   text-decoration: none;
-  color: #fff;
+  color: #000000;
 }
 
 section {
@@ -239,7 +239,7 @@ section {
   position: fixed;
   height: 100%;
   width: 100%;
-  background: #1e1e1e;
+  background: #000000;
   z-index: 100;
   display: flex;
   justify-content: center;
@@ -250,12 +250,13 @@ section {
   overflow: hidden;
 }
 .intro .intro_wrapper .inFix {
-  opacity: 0.2;
+  opacity: 1;
+  color: #ffffff;
 }
 .intro .intro_wrapper .inFill {
   position: absolute;
   width: 0;
-  color: #b9e9b3;
+  color: #8110f6;
   top: 0%;
   left: 0%;
   overflow: hidden;
@@ -307,7 +308,7 @@ nav #container {
 }
 nav #container h2 {
   font-size: 2rem;
-  font-weight: lighter;
+  font-weight: 400;
 }
 nav #container .hamburger {
   display: flex;
@@ -321,24 +322,35 @@ nav #container .hamburger .toggle {
   width: 50px;
   height: 50px;
   cursor: pointer;
-  background-color: rgba(127, 127, 127, 0.3);
-  border-radius: 50%;
+  border: 1px solid black;
+  border-radius: 0;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   transition: transform 0.3s ease;
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
 }
 nav #container .hamburger .toggle span.top,
 nav #container .hamburger .toggle span.bottom {
   width: 20px;
   height: 2px;
-  background-color: #fff;
+  background-color: #000000;
 }
 nav #container .hamburger .toggle span.bottom {
   margin-top: 5px;
+}
+
+body.menu-open nav #container h2,
+body.menu-open nav #container .hamburger p {
+  color: white;
+}
+
+body.menu-open nav #container .hamburger .toggle {
+  border-color: white;
+}
+
+body.menu-open nav #container .hamburger .toggle span {
+  background-color: white;
 }
 
 /* Fullscreen Container */
@@ -346,7 +358,7 @@ nav #container .hamburger .toggle span.bottom {
   position: fixed;
   top: -100%;
   left: 0;
-  background-color: #151515;
+  background-color: #000000;
   height: 100vh;
   width: 100%;
   z-index: 9;
@@ -371,17 +383,18 @@ nav #container .hamburger .toggle span.bottom {
 .menu #container .left a {
   font-size: 5.5rem;
   line-height: 100%;
-  color: #6c6c6c;
+  color: #ffffff;
   font-family: Lexend;
   position: relative;
   width: -moz-fit-content;
   width: fit-content;
   transition: margin 0.3s ease-in-out;
+  font-weight: 700;
 }
 .menu #container .left a::before {
   position: absolute;
   content: attr(data-text);
-  color: #b9e9b3;
+  color: #8110f6;
   height: 100%;
   top: 0;
   left: 0;
@@ -404,6 +417,7 @@ nav #container .hamburger .toggle span.bottom {
 }
 .menu #container .right a {
   font-size: 1.2rem;
+  color: #ffffff;
 }
 .menu #container .right .social_cnt {
   padding-top: 1rem;
@@ -480,7 +494,7 @@ nav #container .hamburger .toggle span.bottom {
   justify-content: center;
   align-items: center;
   transition: all 0.2s linear;
-  color: #b9e9b3;
+  color: #8110f6;
 }
 .btn span {
   mix-blend-mode: difference;
@@ -492,17 +506,17 @@ nav #container .hamburger .toggle span.bottom {
   display: block;
   width: 100%;
   height: 100%;
-  border: 2px solid #b9e9b3;
-  border-radius: 50px;
+  border: 2px solid #8110f6;
+  border-radius: 0;
   transition: all 0.2s linear;
 }
 .btn:hover::before {
   height: 80px;
   width: 80px;
-  background: #b9e9b3;
+  background: #8110f6;
   filter: blur(10px);
   scale: 2;
-  border-radius: 50%;
+  border-radius: 0;
 }
 
 footer {
@@ -522,8 +536,8 @@ footer #container .wrapper {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  border-top: 1px solid #fff;
-  border-bottom: 1px solid #fff;
+  border-top: 1px solid #000000;
+  border-bottom: 1px solid #000000;
 }
 footer #container .wrapper .socialLink {
   position: relative;
@@ -532,7 +546,7 @@ footer #container .wrapper .socialLink {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid #000000;
   padding: 2.2rem 0;
   overflow: hidden;
   transition: all 0.3s ease-in-out;
@@ -542,7 +556,7 @@ footer #container .wrapper .socialLink img {
 }
 footer #container .wrapper .socialLink:hover {
   padding: 2.2rem 3rem;
-  border-bottom: 1px solid #b9e9b3;
+  /*border-bottom: 1px solid #b9e9b3;*/
 }
 footer #container .wrapper .socialLink:last-child {
   border: none;
@@ -589,7 +603,7 @@ footer .full h1 {
 .parallax_img {
   overflow: hidden;
   width: 100%;
-  border-radius: 50px;
+  border-radius: 0;
 }
 .parallax_img video,
 .parallax_img img {
@@ -608,7 +622,7 @@ footer .full h1 {
 
 @media (max-width: 520px) {
   .parallax_img {
-    border-radius: 30px;
+    border-radius: 0;
   }
 }
 .heading_cnt {
@@ -657,8 +671,9 @@ footer .full h1 {
 }
 .about_card .card {
   width: 100%;
-  background: #1e1e1e;
-  border-radius: 30px;
+  background: white;
+  border: 1px solid #393232;
+  border-radius: 0;
   padding: 3rem;
   display: flex;
   flex-direction: column;
@@ -668,21 +683,40 @@ footer .full h1 {
 .about_card .card h1 {
   font-size: 6rem;
   font-family: sans-serif;
-  font-weight: lighter;
+  font-weight: 400;
   text-align: right;
   letter-spacing: -0.05em;
+  color: #000000;
 }
 .about_card .card h4 {
   max-width: 150px;
+  color: #000000;
 }
-.about_card .card:nth-child(1):hover {
-  background: rgb(202, 86, 9);
-}
-.about_card .card:nth-child(2):hover {
-  background: rgb(46, 176, 6);
-}
-.about_card .card:nth-child(3):hover {
-  background: rgb(16, 129, 181);
+/*.about_card .card:nth-child(1):hover {*/
+/*  !*background: rgb(202, 86, 9);*!*/
+/*  background: #ededed;*/
+/*  & h1, h4 {*/
+/*    color: #000000;*/
+/*  }*/
+/*}*/
+/*.about_card .card:nth-child(2):hover {*/
+/*  background: rgb(46, 176, 6);*/
+/*  & h1, h4 {*/
+/*    color: #000000;*/
+/*  }*/
+/*}*/
+/*.about_card .card:nth-child(3):hover {*/
+/*  background: rgb(16, 129, 181);*/
+/*  & h1, h4 {*/
+/*    color: #000000;*/
+/*  }*/
+/*}*/
+
+.about_card .card:hover {
+  background: #000000;
+  & h1, h4 {
+    color: #ffffff;
+  }
 }
 
 @media (max-width: 1440px) {
@@ -733,7 +767,7 @@ footer .full h1 {
 .work #container .wrapper .col .card .parallax_img {
   height: 80vh;
   max-height: 600px;
-  border-radius: 25px;
+  border-radius: 0;
 }
 .work #container .wrapper .col .card .parallax_img img {
   width: 110%;
@@ -783,6 +817,8 @@ footer .full h1 {
 .clients #container .wrapper h3 {
   width: 100%;
   max-width: 900px;
+  color: black;
+  font-weight: 200;
 }
 .clients .swiper {
   width: 100%;
@@ -797,13 +833,24 @@ footer .full h1 {
   justify-content: space-between;
   align-items: center;
   text-align: center;
-  border: 1px solid #b9e9b3;
-  border-radius: 20px;
+  /*border: 1px solid #b9e9b3;*/
+  border-radius: 0;
   padding: 4rem 2rem;
   transition: all 0.3s ease-in-out;
 }
 .clients .swiper .swiper-slide .top p {
   font-size: 1.3rem;
+  color: white;
+}
+.clients .swiper .swiper-slide .top h2 {
+  color: white;
+}
+.clients .swiper .swiper-slide .bottom p {
+  font-size: 1.3rem;
+  color: white;
+}
+.clients .swiper .swiper-slide .bottom h5 {
+  color: white;
 }
 .clients .swiper .swiper-slide:hover {
   border: 1px solid #1e1e1e;
@@ -861,7 +908,7 @@ footer .full h1 {
   -o-object-fit: cover;
      object-fit: cover;
   width: 22vw;
-  border-radius: 20px;
+  border-radius: 0;
 }
 .dribbble .wrapper .img1 {
   top: 1%;
@@ -942,7 +989,7 @@ footer .full h1 {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  border-top: 1px solid #fff;
+  border-top: 1px solid #000000;
 }
 .about_whoWeAre #container .txt p {
   max-width: 900px;
@@ -967,7 +1014,7 @@ footer .full h1 {
   height: 70vh;
   -o-object-fit: cover;
      object-fit: cover;
-  border-radius: 30px;
+  border-radius: 0;
   filter: brightness(80%);
 }
 
@@ -1008,17 +1055,19 @@ footer .full h1 {
   gap: 2rem;
 }
 .about_experiences #container .wrapper .card {
-  border: 1px solid #b9e9b3;
-  border-radius: 20px;
+  border: 1px solid #393232;
+  border-radius: 0;
   padding: 4rem 3rem;
   display: flex;
   flex-direction: column;
   gap: 3rem;
-  background: #1e1e1e;
+  background: black;
   transition: all 0.3s ease-in-out;
+  color: white;
 }
 .about_experiences #container .wrapper .card p {
   opacity: 0.5;
+  color: #ffffff;
 }
 .about_experiences #container .wrapper .card > div {
   display: flex;
@@ -1026,10 +1075,10 @@ footer .full h1 {
   gap: 1rem;
 }
 .about_experiences #container .wrapper .card > div h5 {
-  background: #b9e9b3;
-  color: #151515;
+  background: #8110f6;
+  color: #ffffff;
   font-weight: bold;
-  border-radius: 50%;
+  border-radius: 0;
   height: 4rem;
   width: 4rem;
   display: flex;
@@ -1038,9 +1087,19 @@ footer .full h1 {
 }
 .about_experiences #container .wrapper .card > div p {
   opacity: 1;
+  color: #ffffff;
+  & p {
+    color: #ffffff;
+  }
 }
+
 .about_experiences #container .wrapper .card:hover {
-  border: 1px solid #151515;
+  border: 1px solid #393232;
+  background-color: white;
+  color: black;
+  & p {
+    color: #000000;
+  }
 }
 
 @media (min-width: 1920px) {
@@ -1086,7 +1145,7 @@ footer .full h1 {
   justify-content: space-between;
   align-items: center;
   padding: 2.2rem 0;
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid #000000;
   transition: all 0.3s ease-in-out;
 }
 .awwards #container .wrapper .awwards_block .awwards_name {
@@ -1140,10 +1199,11 @@ footer .full h1 {
   flex-direction: column;
   text-align: center;
   gap: 3rem;
-  background: #1e1e1e;
-  border: 1px solid #b9e9b3;
+  background: #000000;
+  /*border: 1px solid #b9e9b3;*/
+  color: #ffffff;
   padding: 4rem;
-  border-radius: 25px;
+  border-radius: 0;
   transition: border 0.3s ease-in-out;
 }
 .joinTeam .wrapper #container .join_card_wrapper .card:hover {
@@ -1207,7 +1267,7 @@ footer .full h1 {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  border-radius: 35px;
+  border-radius: 0;
 }
 
 @media (max-width: 1440px) {
@@ -1252,7 +1312,7 @@ footer .full h1 {
 }
 .team #container .team_wrapper .team_card .parallax_img {
   height: 70vh;
-  border-radius: 20px;
+  border-radius: 0;
 }
 .team #container .team_wrapper .team_card h5 {
   margin-top: 2rem;
@@ -1306,9 +1366,10 @@ footer .full h1 {
   overflow: hidden;
 }
 .sticky_scrolling .card {
-  background: #1e1e1e;
+  background: #ffffff;
+  border: 1px solid #393232;
   padding: 4rem 3rem;
-  border-radius: 25px;
+  border-radius: 0;
 }
 .sticky_scrolling .card h3 {
   line-height: 80%;
@@ -1364,11 +1425,11 @@ footer .full h1 {
   background: none;
   outline: none;
   border: none;
-  border-bottom: 1px solid rgb(78, 78, 78);
+  border-bottom: 1px solid #000000;
   padding: 2rem 0;
   font-size: 1.2rem;
   color: #fff;
-  font-family: syneR;
+  font-family: Lexend, sans-serif;
   position: relative;
   transition: all 0.3s ease-in-out;
 }
@@ -1376,7 +1437,7 @@ footer .full h1 {
 .contact #container .wrapper form input[type=email]:focus,
 .contact #container .wrapper form input[type=tel]:focus,
 .contact #container .wrapper form textarea:focus {
-  border-bottom: 1px solid #b9e9b3;
+  border-bottom: 1px solid #8110f6;
 }
 .contact #container .wrapper form textarea {
   resize: vertical;
@@ -1398,14 +1459,14 @@ footer .full h1 {
   position: absolute;
   width: 100%;
   height: 100%;
-  border: 1px solid #b9e9b3;
-  border-radius: 50px;
+  border: 1px solid #8110f6;
+  border-radius: 0;
   transition: all 0.2s linear;
 }
 .contact #container .wrapper form .inputSub input[type=submit] {
   background: none;
   outline: none;
-  color: #b9e9b3;
+  color: #8110f6;
   border: none;
   font-size: 1rem;
   width: 100%;
@@ -1418,10 +1479,10 @@ footer .full h1 {
 .contact #container .wrapper form .inputSub:hover .inputBlur {
   height: 60px;
   width: 60px;
-  background: #b9e9b3;
+  background: #8110f6;
   filter: blur(10px);
   scale: 2;
-  border-radius: 50%;
+  border-radius: 0;
 }
 
 @media (max-width: 900px) {
@@ -1436,6 +1497,7 @@ footer .full h1 {
   }
 }
 header {
+  position: relative;
   padding-bottom: 4rem;
   width: 100%;
 }
@@ -1453,9 +1515,20 @@ header #container h2 {
   max-width: 1000px;
 }
 header #container p {
-  max-width: 420px;
-  text-transform: uppercase;
+  max-width: 620px;
+  text-transform: capitalize;
   margin-top: 1rem;
+  font-size: 1.2rem;
+}
+
+header .hero_lightning {
+  position: absolute;
+  content: '';
+  top: 50%;
+  left: 50%;
+  transform: translate(-30%, -50%);
+  opacity: 0.3;
+  z-index: -1;
 }
 
 #full_img {
@@ -1474,6 +1547,7 @@ header #container p {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
+  color: white;
 }
 
 @media (max-width: 1040px) {
