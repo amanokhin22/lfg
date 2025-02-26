@@ -390,6 +390,7 @@ body.menu-open nav #container .hamburger .toggle span {
   width: fit-content;
   transition: margin 0.3s ease-in-out;
   font-weight: 700;
+  text-transform: uppercase;
 }
 .menu #container .left a::before {
   position: absolute;
@@ -485,6 +486,9 @@ body.menu-open nav #container .hamburger .toggle span {
   .menu #container .right .social_cnt img {
     width: 36px;
   }
+}
+.hero .btn {
+  width: 230px;
 }
 .btn {
   padding: 1.2rem 2rem;
@@ -838,11 +842,17 @@ footer .full h1 {
   padding: 4rem 2rem;
   transition: all 0.3s ease-in-out;
 }
+.clients .swiper .swiper-slide .top {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
 .clients .swiper .swiper-slide .top p {
   font-size: 1.3rem;
   color: white;
 }
-.clients .swiper .swiper-slide .top h2 {
+.clients .swiper .swiper-slide .top h3 {
   color: white;
 }
 .clients .swiper .swiper-slide .bottom p {
@@ -871,7 +881,7 @@ footer .full h1 {
   overflow: visible;
 }
 .dribbble .marquee {
-  padding: 12rem 0;
+  /*padding: 12rem 0;*/
 }
 .dribbble .marquee .marquee-container {
   white-space: nowrap;
@@ -1187,57 +1197,76 @@ footer .full h1 {
   width: 100%;
   max-width: 1000px;
 }
+.joinTeam .wrapper #container h4 {
+  font-weight: 400;
+  text-transform: none;
+}
 .joinTeam .wrapper #container .join_card_wrapper {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: 2rem;
 }
 .joinTeam .wrapper #container .join_card_wrapper .card {
   display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  gap: 3rem;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   text-align: center;
-  gap: 3rem;
-  background: #000000;
-  /*border: 1px solid #b9e9b3;*/
-  color: #ffffff;
-  padding: 4rem;
+  background: #ffffff;
+  border: 1px solid #393232;
+  color: #000000;
+  padding: 5.6rem 4rem;
   border-radius: 0;
-  transition: border 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.joinTeam .wrapper #container .join_card_wrapper .card .btn {
+  opacity: 0;
+  height: 0;
+  padding: 0;
 }
 .joinTeam .wrapper #container .join_card_wrapper .card:hover {
-  border: 1px solid #151515;
+  gap: 3rem;
+  padding: 4rem;
+  & .btn {
+    opacity: 1;
+    height: unset;
+    padding: 1.2rem 2rem;
+    transition: all 0.3s ease-in-out;
+  }
 }
 
-@media (max-width: 1440px) {
+@media (max-width: 1600px) {
   .joinTeam .wrapper #container .join_card_wrapper {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 1.6rem;
   }
 }
 @media (max-width: 1150px) {
   .joinTeam .wrapper #container .join_card_wrapper {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
   }
 }
 @media (max-width: 868px) {
-  .joinTeam .wrapper #container .join_card_wrapper {
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-  }
-  .joinTeam .wrapper #container .join_card_wrapper .card {
-    padding: 4rem 2rem;
-  }
+  /*.joinTeam .wrapper #container .join_card_wrapper {*/
+  /*  grid-template-columns: 1fr 1fr;*/
+  /*  gap: 1rem;*/
+  /*}*/
+  /*.joinTeam .wrapper #container .join_card_wrapper .card {*/
+  /*  padding: 4rem 2rem;*/
+  /*}*/
   .joinTeam .wrapper #container .join_card_wrapper .card br {
     display: none;
   }
 }
 @media (max-width: 600px) {
-  .joinTeam .wrapper #container .join_card_wrapper {
-    grid-template-columns: 1fr;
-    gap: 1.6rem;
-  }
+  /*.joinTeam .wrapper #container .join_card_wrapper {*/
+  /*  grid-template-columns: 1fr;*/
+  /*  gap: 1.6rem;*/
+  /*}*/
   .joinTeam .wrapper #container .join_card_wrapper .card {
     gap: 2rem;
   }
