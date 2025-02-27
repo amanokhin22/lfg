@@ -100,7 +100,7 @@ h2 {
 h3 {
   font-size: 4rem;
   font-family: Lexend;
-  font-weight: lighter;
+  font-weight: 600;
   text-transform: uppercase;
   line-height: 110%;
 }
@@ -108,14 +108,14 @@ h3 {
 h4 {
   font-size: 2.2rem;
   font-family: Lexend;
-  font-weight: lighter;
+  font-weight: 500;
   text-transform: uppercase;
   line-height: 90%;
 }
 
 h5 {
   font-size: 2rem;
-  font-weight: lighter;
+  font-weight: 400;
   line-height: 120%;
 }
 
@@ -153,7 +153,7 @@ p {
 }
 @media (max-width: 780px) {
   h1 {
-    font-size: 6rem;
+    font-size: 5.3rem;
   }
   h2 {
     font-size: 4rem;
@@ -167,19 +167,19 @@ p {
 }
 @media (max-width: 520px) {
   h1 {
-    font-size: 20vw;
-  }
-  h2 {
     font-size: 15vw;
   }
-  h3 {
+  h2 {
     font-size: 10vw;
   }
-  h4 {
+  h3 {
     font-size: 8vw;
   }
-  h5 {
+  h4 {
     font-size: 6vw;
+  }
+  h5 {
+    font-size: 4vw;
   }
   p {
     font-size: 1rem;
@@ -505,6 +505,9 @@ body.menu-open nav a img.white-logo {
     width: 36px;
   }
 }
+.hero {
+  padding: 12rem 10rem 0 4rem;
+}
 .hero .btn {
   width: 230px;
 }
@@ -628,7 +631,7 @@ footer .full {
 .footer-left {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   gap: 20px;
   height: 100%;
@@ -639,9 +642,10 @@ footer .full {
 .footer-nav-block {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: left;
   gap: 40px;
   margin-bottom: 20px;
+  flex-wrap: wrap;
 }
 
 .footer-nav-block a {
@@ -649,6 +653,11 @@ footer .full {
   transition: color 0.3s;
   text-decoration: none;
   color: white;
+  font-weight: 600;
+  text-transform: uppercase;
+  &:hover {
+    color: #8110f6;
+  }
 }
 
 .footer-texts-block {
@@ -660,20 +669,23 @@ footer .full {
 }
 
 .footer-texts-block p {
-  text-align: center;
-  font-size: 1.2rem;
+  font-size: 1rem;
   line-height: 1.5;
   color: white;
+  opacity: 0.6;
 }
 
 .footer-right {
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   height: 100%;
   max-width: 620px;
   max-height: 780px;
   & svg {
-    width: 100%;
+    width: 80%;
     height: 100%;
   }
 }
@@ -688,6 +700,12 @@ footer .full {
   width: 100%;
   height: 1px;
   background-color: white;
+}
+.footer-privacy-policy {
+  font-size: 1.2rem;
+  &:hover {
+  text-decoration: underline;
+}
 }
 @media (max-width: 1180px) {
   .footer-container {
@@ -817,25 +835,12 @@ footer .full {
   max-width: 150px;
   color: #000000;
 }
-/*.about_card .card:nth-child(1):hover {*/
-/*  !*background: rgb(202, 86, 9);*!*/
-/*  background: #ededed;*/
-/*  & h1, h4 {*/
-/*    color: #000000;*/
-/*  }*/
-/*}*/
-/*.about_card .card:nth-child(2):hover {*/
-/*  background: rgb(46, 176, 6);*/
-/*  & h1, h4 {*/
-/*    color: #000000;*/
-/*  }*/
-/*}*/
-/*.about_card .card:nth-child(3):hover {*/
-/*  background: rgb(16, 129, 181);*/
-/*  & h1, h4 {*/
-/*    color: #000000;*/
-/*  }*/
-/*}*/
+.about-insertion-container {
+  align-items: flex-start;
+  text-align: justify;
+  position: relative;
+  max-width: 1200px;
+}
 
 .about_card .card:hover {
   background: #000000;
@@ -1116,6 +1121,9 @@ footer .full {
   max-width: 848px;
   width: 100%;
 }
+.about_whoWeAre #container h1 {
+  opacity: 1;
+}
 .about_whoWeAre #container .txt {
   display: flex;
   flex-direction: column;
@@ -1200,21 +1208,41 @@ footer .full {
   opacity: 0.5;
   color: #ffffff;
 }
+.exp-card-top-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+.exp-card-photo {
+  background-color: #3b3f47;
+  border-radius: 100%;
+  width: 74px;
+  height: 74px;
+  overflow: hidden;
+  & img {
+    object-fit: cover;
+    border-color: #0000001a;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 5px 57.2272px #0000000d;
+  }
+}
 .about_experiences #container .wrapper .card > div {
   display: flex;
   align-items: center;
   gap: 1rem;
 }
 .about_experiences #container .wrapper .card > div h5 {
-  background: #8110f6;
+  /*background: #8110f6;*/
   color: #ffffff;
   font-weight: bold;
   border-radius: 0;
-  height: 4rem;
-  width: 4rem;
+  /*height: 4rem;*/
+  /*width: 4rem;*/
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
 }
 .about_experiences #container .wrapper .card > div p {
   opacity: 1;
@@ -1231,6 +1259,9 @@ footer .full {
   & p {
     color: #000000;
   }
+  & h5 {
+    color: black;
+  }
 }
 
 @media (min-width: 1920px) {
@@ -1238,7 +1269,7 @@ footer .full {
     gap: 2rem;
   }
 }
-@media (max-width: 868px) {
+@media (max-width: 1440px) {
   .about_experiences #container .wrapper {
     gap: 1.6rem;
     grid-template-columns: 1fr;
@@ -1488,32 +1519,84 @@ footer .full {
   margin-top: 2rem;
 }
 
-@media (max-width: 1440px) {
-  .team #container .team_wrapper .team_card .parallax_img {
-    max-height: 520px;
-  }
+.team_card {
+  position: relative;
+  overflow: hidden;
 }
-@media (max-width: 960px) {
+
+.parallax_img {
+  position: relative;
+  overflow: hidden;
+}
+
+.team #container .team_wrapper .team_card .parallax_img {
+  aspect-ratio: 3/4;
+  width: 100%;
+  border-radius: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.parallax_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.parallax_img .card_info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.95);
+  color: #000;
+  padding: 1.5rem;
+  transform: translateY(100%);
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  max-height: 90%;
+  overflow-y: auto;
+}
+
+.team_card:hover .card_info {
+  transform: translateY(0);
+}
+
+.card_info h5 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.card_info p {
+  font-size: 0.875rem;
+  margin: 0;
+  line-height: 1.4;
+  padding-bottom: 1rem;
+}
+
+
+@media (max-width: 1440px) {
   .team #container .team_wrapper {
     grid-template-columns: 1fr 1fr;
-    -moz-column-gap: 2rem;
-         column-gap: 2rem;
-    row-gap: 4rem;
   }
   .team #container .team_wrapper .team_card .parallax_img {
-    max-height: 450px;
+    aspect-ratio: 4/5;
   }
 }
-@media (max-width: 520px) {
-  .team {
-    padding: 8rem 0;
-  }
+
+@media (max-width: 960px) {
   .team #container .team_wrapper {
     grid-template-columns: 1fr;
-    gap: 3rem;
   }
+  .parallax_img .card_info {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 520px) {
   .team #container .team_wrapper .team_card .parallax_img {
-    max-height: 450px;
+    aspect-ratio: 2/3;
   }
 }
 .services {
