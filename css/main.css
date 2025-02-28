@@ -262,6 +262,16 @@ section {
   overflow: hidden;
 }
 
+.intro-br {
+  display: none;
+}
+
+@media (max-width: 1140px) {
+  .intro-br {
+    display: inline;
+  }
+}
+
 .canvas-wrapper {
   position: fixed;
   z-index: -1;
@@ -360,6 +370,7 @@ nav a img {
 
 nav a img.black-logo {
   display: block;
+  width: 15rem;
 }
 
 body.menu-open nav a img.black-logo {
@@ -368,6 +379,7 @@ body.menu-open nav a img.black-logo {
 
 body.menu-open nav a img.white-logo {
   display: block;
+  width: 15rem;
 }
 
 
@@ -592,6 +604,18 @@ footer #container .copyrights {
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 4rem;
+}
+.copyrights {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  color: white;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 40px;
+  & p {
+    font-size: 1.2rem;
+  }
 }
 footer .full {
   height: 16vw;
@@ -1043,7 +1067,7 @@ footer .full {
   position: absolute;
   -o-object-fit: cover;
      object-fit: cover;
-  width: 22vw;
+  width: 16vw;
   border-radius: 0;
 }
 .dribbble .wrapper .img1 {
@@ -1056,7 +1080,7 @@ footer .full {
 }
 .dribbble .wrapper .img3 {
   bottom: 1%;
-  left: 15%;
+  left: 12%;
 }
 .dribbble .wrapper .img4 {
   right: 10%;
@@ -1068,7 +1092,31 @@ footer .full {
 }
 .dribbble .wrapper .img6 {
   bottom: 0%;
-  right: 20%;
+  right: 12%;
+}
+.dribbble .wrapper .img7 {
+  bottom: -8%;
+  right: 28%;
+}
+.dribbble .wrapper .img8 {
+  bottom: 0%;
+  right: 38%;
+}
+.dribbble .wrapper .img9 {
+  bottom: -8%;
+  right: 57%;
+}
+.dribbble .wrapper .img10 {
+  top: 0%;
+  right: 65%;
+}
+.dribbble .wrapper .img11 {
+  top: -5%;
+  right: 45%;
+}
+.dribbble .wrapper .img12 {
+  top: 0%;
+  right: 22%;
 }
 
 @media (max-width: 1040px) {
@@ -1208,10 +1256,15 @@ footer .full {
   opacity: 0.5;
   color: #ffffff;
 }
+
+.cat p {
+  margin-top: 2rem !important;
+  opacity: 1 !important;
+}
 .exp-card-top-wrapper {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: flex-start !important;
   gap: 1rem;
 }
 .exp-card-photo {
@@ -1231,18 +1284,19 @@ footer .full {
 .about_experiences #container .wrapper .card > div {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 1rem;
 }
 .about_experiences #container .wrapper .card > div h5 {
-  /*background: #8110f6;*/
+  background: #8110f6;
   color: #ffffff;
   font-weight: bold;
   border-radius: 0;
-  /*height: 4rem;*/
-  /*width: 4rem;*/
+  height: 4rem;
+  width: 4rem;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
 }
 .about_experiences #container .wrapper .card > div p {
   opacity: 1;
@@ -1264,6 +1318,24 @@ footer .full {
   }
 }
 
+.about-contractors-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  margin-top: 5rem;
+}
+
+.about-contractor {
+  filter: grayscale();
+  flex: 0 auto;
+  justify-content: center;
+  align-items: center;
+  height: 46px;
+  display: flex;
+}
+
 @media (min-width: 1920px) {
   .about_experiences #container .wrapper .card > div {
     gap: 2rem;
@@ -1273,6 +1345,9 @@ footer .full {
   .about_experiences #container .wrapper {
     gap: 1.6rem;
     grid-template-columns: 1fr;
+  }
+  .about-contractors-wrapper {
+    justify-content: flex-start;
   }
 }
 @media (max-width: 520px) {
@@ -1507,16 +1582,8 @@ footer .full {
 .team #container .team_wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  -moz-column-gap: 2rem;
-       column-gap: 2rem;
+  column-gap: 2rem;
   row-gap: 4rem;
-}
-.team #container .team_wrapper .team_card .parallax_img {
-  height: 70vh;
-  border-radius: 0;
-}
-.team #container .team_wrapper .team_card h5 {
-  margin-top: 2rem;
 }
 
 .team_card {
@@ -1527,14 +1594,7 @@ footer .full {
 .parallax_img {
   position: relative;
   overflow: hidden;
-}
-
-.team #container .team_wrapper .team_card .parallax_img {
   aspect-ratio: 3/4;
-  width: 100%;
-  border-radius: 0;
-  position: relative;
-  overflow: hidden;
 }
 
 .parallax_img img {
@@ -1551,36 +1611,49 @@ footer .full {
   right: 0;
   background: rgba(255, 255, 255, 0.95);
   color: #000;
-  padding: 1.5rem;
-  transform: translateY(100%);
-  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  max-height: 90%;
-  overflow-y: auto;
+  padding: 1.5rem 1.5rem 1rem 1.5rem;
+  max-height: 40%;
+  transition: max-height 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  overflow: hidden;
 }
 
-.team_card:hover .card_info {
-  transform: translateY(0);
+.card_info h4 {
+  text-transform: unset;
+  font-weight: 400;
+  margin: 0 0 0.5rem;
 }
 
 .card_info h5 {
   font-size: 1.25rem;
   font-weight: bold;
-  margin-bottom: 0.5rem;
+  margin: 0 0 1rem;
 }
 
 .card_info p {
-  font-size: 0.875rem;
-  margin: 0;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.3s ease 0.1s;
+  font-size: 1rem;
   line-height: 1.4;
-  padding-bottom: 1rem;
+  margin: 0;
+  height: 0;
 }
 
+.team_card:hover .card_info {
+  max-height: 90%;
+}
+
+.team_card:hover .card_info p {
+  opacity: 1;
+  transform: translateY(0);
+  height: auto;
+}
 
 @media (max-width: 1440px) {
   .team #container .team_wrapper {
     grid-template-columns: 1fr 1fr;
   }
-  .team #container .team_wrapper .team_card .parallax_img {
+  .parallax_img {
     aspect-ratio: 4/5;
   }
 }
@@ -1591,12 +1664,16 @@ footer .full {
   }
   .parallax_img .card_info {
     padding: 1rem;
+    max-height: 35%;
   }
 }
 
 @media (max-width: 520px) {
-  .team #container .team_wrapper .team_card .parallax_img {
+  .parallax_img {
     aspect-ratio: 2/3;
+  }
+  .parallax_img .card_info {
+    max-height: 30%;
   }
 }
 .services {
@@ -1663,6 +1740,9 @@ footer .full {
 .contact #container .wrapper {
   max-width: 900px;
   width: 100%;
+}
+.contact #container .wrapper p {
+  margin-top: 1rem;
 }
 .contact #container .wrapper form {
   display: flex;
