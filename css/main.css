@@ -516,6 +516,9 @@ body.menu-open nav a img.white-logo {
   .menu #container .right .social_cnt img {
     width: 36px;
   }
+  nav a img.black-logo {
+    width: 10rem;
+  }
 }
 .hero {
   padding: 12rem 10rem 0 4rem;
