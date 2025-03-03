@@ -1514,7 +1514,8 @@ footer .full {
 }
 .joinTeam .wrapper #container h5 {
   width: 100%;
-  max-width: 1000px;
+  /*max-width: 1000px;*/
+  text-align: left;
 }
 .joinTeam .wrapper #container h4 {
   font-weight: 400;
@@ -1533,7 +1534,7 @@ footer .full {
   height: 350px;
   gap: 3rem;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   flex-direction: column;
   text-align: center;
   background: #ffffff;
@@ -1547,6 +1548,8 @@ footer .full {
   opacity: 0;
   height: 0;
   padding: 0;
+  align-self: center;
+  margin-top: -3rem;
 }
 .joinTeam .wrapper #container .join_card_wrapper .card:hover {
   & .btn {
@@ -1554,6 +1557,7 @@ footer .full {
     height: unset;
     padding: 1.2rem 2rem;
     transition: all 0.3s ease-in-out;
+    margin-top: 0;
   }
 }
 
@@ -1562,6 +1566,8 @@ footer .full {
   align-items: flex-start;
   justify-content: flex-start;
   gap: 1rem;
+  align-self: flex-start;
+  margin-top: -1.5rem;
   & p {
     white-space: nowrap;
     opacity: 0.6;
@@ -1859,7 +1865,7 @@ footer .full {
   border-bottom: 1px solid #000000;
   padding: 2rem 0;
   font-size: 1.2rem;
-  color: #fff;
+  color: #000000;
   font-family: Lexend, sans-serif;
   position: relative;
   transition: all 0.3s ease-in-out;

@@ -87,17 +87,17 @@
                         Have a question, a collaboration idea, or just want to say hello? We’re all ears. Whether it’s about our games, partnerships, careers, or anything else—drop us a message, and we’ll get back to you.
                     </h5>
                     <p>📩 Fill out the form below, and let’s connect!</p>
-                    <form action="" class="mT2">
-                        <input type="text" name="name" placeholder="Your name">
-                        <input type="email" name="email" placeholder="Your email address">
+                    <form id="contactForm" class="mT2">
+                        <input type="text" name="name" placeholder="Your name" required>
+                        <input type="email" name="email" placeholder="Your email address" required>
                         <input type="tel" name="phone" placeholder="Your phone number">
-                        <input type="text" name="companyName" placeholder="Company / Organization">
-                        <textarea name="message"
-                            placeholder="eg.Hello! We're seeking your expertise to infuse our project with unparalleled uniqueness."></textarea>
+                        <input type="text" name="company" placeholder="Company / Organization">
+                        <textarea name="message" placeholder="eg.Hello! We're seeking your expertise..." required></textarea>
                         <div class="inputSub focus" data-magnetic>
                             <div class="inputBlur"></div>
                             <input type="submit" value="Submit">
                         </div>
+                        <div id="formMessage"></div>
                     </form>
                 </div>
             </div>
@@ -152,6 +152,49 @@
     <script src="js/main.js" type="module" defer></script>
     <!--    Color burger icon-->
     <script src="js/menu-color.js" defer></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script>
+        const supabaseUrl = 'https://adqbsdduxuztnglfvbth.supabase.co';
+        const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFkcWJzZGR1eHV6dG5nbGZ2YnRoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDA5OTY5OTAsImV4cCI6MjA1NjU3Mjk5MH0.ub4Ir1xF_7oVGcs0lHdr3-Oo1CXD3DEw4FVeye0_IRc';
+        const supabase = window.supabase.createClient(supabaseUrl, supabaseKey);
+
+        document.getElementById('contactForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const formData = {
+                name: e.target.name.value,
+                email: e.target.email.value,
+                phone: e.target.phone.value || null,
+                company: e.target.company.value || null,
+                message: e.target.message.value
+            };
+
+            try {
+                const { data, error } = await supabase
+                    .from('contacts')
+                    .insert([formData])
+                    .select();
+
+                if (error) {
+                    console.error('Supabase error:', error);
+                    throw error;
+                }
+
+                showMessage('✅ Success! We will contact you soon.', 'success');
+                e.target.reset();
+            } catch (error) {
+                console.error('Form submission error:', error);
+                showMessage(`❌ Error: ${error.message}`, 'error');
+            }
+        });
+
+        function showMessage(text, type = 'info') {
+            const messageEl = document.getElementById('formMessage');
+            messageEl.textContent = text;
+            messageEl.className = `message ${type}`;
+        }
+    </script>
 </body>
 
 </html>
