@@ -1515,7 +1515,6 @@ footer .full {
 .joinTeam .wrapper #container h5 {
   width: 100%;
   max-width: 1000px;
-  text-align: left;
 }
 .joinTeam .wrapper #container h4 {
   font-weight: 400;
@@ -1563,7 +1562,6 @@ footer .full {
   align-items: flex-start;
   justify-content: flex-start;
   gap: 1rem;
-  align-self: flex-start;
   & p {
     white-space: nowrap;
     opacity: 0.6;
