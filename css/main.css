@@ -798,6 +798,96 @@ footer .full {
   text-decoration: underline;
 }
 }
+
+.social-icon {
+  position: relative;
+  width: 48px;
+  height: 48px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  animation: flicker-out 0.2s forwards;
+}
+
+.social-icon .corner {
+  position: absolute;
+}
+
+.social-icon .corner svg {
+  display: block;
+}
+
+.social-icon .corner.top-left {
+  top: 0;
+  left: 0;
+}
+.social-icon .corner.bottom-right {
+  bottom: 0;
+  right: 0;
+}
+
+.social-icon .icon svg {
+  display: block;
+  width: 32px;
+  height: 32px;
+}
+
+.socialLink:hover .social-icon {
+  animation: flicker-in 0.2s forwards;
+}
+
+.socialLink:hover .social-icon .icon svg path {
+  animation: flicker-in-icon 0.2s forwards;
+}
+
+.socialLink:hover .social-icon .icon svg .icon-path {
+  animation: flicker-in-icon 0.2s forwards;
+}
+.socialLink:hover .social-icon .corner svg .corner-path {
+  animation: flicker-in-icon 0.2s forwards;
+}
+
+@keyframes flicker-in-icon {
+  0%   { fill: black; }
+  33%  { fill: white; }
+  66%  { fill: black; }
+  100% { fill: white; }
+}
+
+@keyframes flicker-in {
+  0% { background-color: transparent; }
+  33% { background-color: black; }
+  66% { background-color: white; }
+  100% { background-color: black; }
+}
+
+.social-icon:not(:hover) .icon svg .icon-path {
+  animation: flicker-out-icon 0.2s forwards;
+}
+
+.social-icon:not(:hover) .corner svg .corner-path {
+  animation: flicker-out-corner 0.2s forwards;
+}
+
+@keyframes flicker-out {
+  0% { background-color: black; }
+  33% { background-color: white; }
+  66% { background-color: black; }
+  100% { background-color: transparent; }
+}
+
+@keyframes licker-out-corner {
+  0% { fill: white; }
+  33% { fill: black; }
+  66% { fill: white; }
+  100% { fill: black; }
+}
 @media (max-width: 1180px) {
   .footer-container {
     justify-content: center;
