@@ -1790,6 +1790,22 @@ footer .full {
 .services #container .sticky_scroll {
   width: 100%;
 }
+.services #container .sticky_scroll .heading h2 {
+  padding: 2rem 0;
+  font-size: 5rem;
+  white-space: nowrap;
+}
+
+@media (max-width: 780px) {
+  .services #container .sticky_scroll .heading h2 {
+    font-size: 4rem;
+  }
+}
+@media (max-width: 520px) {
+  .services #container .sticky_scroll .heading h2 {
+    font-size: 10vw;
+  }
+}
 
 .sticky_scrolling {
   width: 100%;
@@ -1813,7 +1829,7 @@ footer .full {
   opacity: 0.5;
 }
 
-@media (max-width: 1400px) {
+@media (max-width: 1300px) {
   .services #container {
     gap: 4rem;
     flex-direction: column;
