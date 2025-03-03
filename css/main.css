@@ -970,7 +970,7 @@ footer .full {
   }
 }
 .work {
-  padding-bottom: 12rem;
+  padding: 12rem 0;
 }
 .work #container .wrapper {
   display: flex;
@@ -1027,7 +1027,7 @@ footer .full {
 }
 @media (max-width: 520px) {
   .work {
-    padding-bottom: 8rem;
+    padding: 8rem 0;
   }
 }
 .clients #container .wrapper {
