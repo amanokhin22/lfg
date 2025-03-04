@@ -1074,7 +1074,7 @@ footer .full {
   }
 }
 .work {
-  padding: 12rem 0;
+  padding: 12rem 0 1rem 0;
 }
 .work #container .wrapper {
   display: flex;
@@ -1701,6 +1701,7 @@ footer .full {
 }
 @media (max-width: 600px) {
   .joinTeam .wrapper #container .join_card_wrapper .card {
+    padding: 5rem 3rem;;
     gap: 2rem;
   }
 }
@@ -1709,6 +1710,7 @@ footer .full {
     padding-bottom: 8rem;
   }
   .joinTeam .wrapper #container .join_card_wrapper .card {
+    padding: 2rem;
     & .btn {
       opacity: 1;
       height: unset;
@@ -1729,7 +1731,7 @@ footer .full {
   display: flex;
   align-items: center;
   gap: 4rem;
-  width: 270vw;
+  /*width: 270vw;*/
   height: 60vh;
 }
 .insights_Office .horizontal_scroll img {
